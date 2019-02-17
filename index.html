@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="/reload/reload.js"></script>
+	<title>github issues analyser</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- the input box -->
+		<div>Enter the repo name here: <input id="repoName" ,autofocus, placeholder="eg(zadium/trillum)" onkeypress="repoEntered(event)">
+		</div>
+		<!-- showing rotating loader when apis calls are running -->
+		<div id="loader" class="loader hide"></div>
+		<!-- table to show the issues count -->
+		<table>
+			<thead>
+				<th>Total open issues</th>
+				<th> Within Last 24 hours</th>
+				<th>between 24 hours and 7 days</th>
+				<th>before 7 days</th>
+			</thead>
+			<tbody>
+				<tr>
+					<!--ids will we used to change value in cells  -->
+					<td id="toi"></td>
+					<td id="l24h"></td>
+					<td id="24h7d"></td>
+					<td id="b7d"></td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!-- including the script at last of the body as we are manipulting 
+		DOM element from our script -->
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+
+
+</html>
